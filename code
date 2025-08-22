@@ -1,0 +1,145 @@
+import math
+
+while True:
+
+    print("--------------------------------")
+    print("Welcome to Scientific calculator")
+    print("-------------------------------- \n")
+    
+    print("What type of function do you wanna perform :  \n")
+    print("For Arithmetic calculations     enter - (1)")
+    print("For Scientific calculations     enter - (2)")
+    print("For Trigonometric calculations  enter - (3)\n")
+
+    cat = int(input("The function selected : "))
+
+    if(cat == 1):
+        operation = str(input("What function do want to perform [+|-|*|/] : "))
+        num1 = float(input("Enter the first number : "))
+        num2 = float(input("Enter the second number : "))
+        if(operation == '+'):
+            print("The sum = ",num1+num2)
+        elif(operation == '-'):
+           print("The difference = ",num1-num2)
+        elif(operation == '*'):
+            print("The product = ",num1*num2)
+        elif(operation == '/'):
+            if(num2 == 0):
+                print("Division not possible.")
+            else:
+                print("The result = ",num1/num2)
+        else:
+            print("Invalid choice.")
+
+    elif(cat == 2):
+        print("To access power function        enter - (1)")
+        print("To access square root function  enter - (2)")
+        print("To access logarithms function   enter - (3)")
+        print("To access exponent function     enter - (4)")
+        print("To access absolute function     enter - (5) \n")
+        operation = int(input("The function selected : "))
+        if(operation == 1):
+            base = float(input("Enter the base : "))
+            exponent = float(input("Enter the exponent : "))
+            print("The result = ",base ** exponent)
+        elif(operation == 2):
+            num = float(input("Enter the number : "))
+            print("The result = ",num ** 0.5)
+        elif(operation == 3):
+            num = float(input("Enter the number : "))
+            result = math.log(num)
+            print("The result = ",result)
+        elif(operation == 4):
+            num = float(input("Enter the number : "))
+            result = math.exp(num)
+            print("The result = ",result)
+        elif(operation == 5):
+            num = float(input("Enter the number : "))
+            result = abs(num)
+            print("The result = ",result)
+        else:
+            print("Invalid choice.")
+
+    elif(cat == 3):
+        print("To access basic Trigonometric Functions       enter - (1)")
+        print("To access inverse Trigonometric Functions     enter - (2)")
+        print("To access hyperbolic Trigonometric Functions  enter - (3)")
+        print("To convert between degrees and radians.       enter - (4)\n")
+        op = int(input("The category selected : "))
+        if(op == 1):
+            print("To access sine function        enter - (1) \n")
+            print("To access cosine function      enter - (2) \n")
+            print("To access tan function         enter - (3) \n")
+            operation = int(input("The function selected : "))
+            num = float(input("Enter the number : "))
+            if(operation == 1):
+                result = math.sin(num)
+                print("The result = ",result)
+            elif(operation == 2):
+               result = math.cos(num)
+               print("The result = ",result)
+            elif(operation == 3):
+                result = math.tan(num)
+                print("The result = ",result)
+            else:
+               print("Invalid choice.")
+        elif(op == 2):
+            print("To access inverse sine function        enter - (1)")
+            print("To access inverse cosine function      enter - (2)")
+            print("To access inverse tan function         enter - (3) \n")
+            operation = int(input("The function selected : "))
+            num = float(input("Enter the number : "))
+            if(operation == 1):
+                result = math.asin(num)
+                print("The result = ",result)
+            elif(operation == 2):
+                result = math.acos(num)
+                print("The result = ",result)
+            elif(operation == 3):
+                result = math.atan(num)
+                print("The result = ",result)
+            else:
+                print("Invalid choice.")
+        elif(op == 3):
+            print("To access hyperbolic sine function        enter - (1)")
+            print("To access hyperbolic cosine function      enter - (2)")
+            print("To access hyperbolic tan function         enter - (3) \n")
+            operation = int(input("The function selected : "))
+            num = float(input("Enter the number : "))
+            if(operation == 1):
+                result = math.sinh(num)
+                print("The result = ",result)
+            elif(operation == 2):
+                result = math.cosh(num)
+                print("The result = ",result)
+            elif(operation == 3):
+               result = math.tanh(num)
+               print("The result = ",result)
+            else:
+                print("Invalid choice.")
+        elif(op == 4):
+            print("To convert from degrees to radians enter - (1)")
+            print("To convert from radians to degrees enter - (2) \n")
+            operation = int(input("The function selected : "))
+            num = float(input("Enter the number : "))
+            if(operation == 1):
+                result = math.radians(num)
+                print("The result = ",result)
+            elif(operation == 2):
+                result = math.degrees(math.pi/num)
+                print("The result = ",result)
+            else:
+                print("Invalid choice.")        
+        else:
+            print("Invalid choice.")
+    
+    else:
+        print("Invalid choice, try again.")
+
+    ch = input("\nDo you want to perform another calculation? (y/n): ").lower()
+    if ch != 'y':
+        print("\n")
+        print("------------------------------")
+        print("Thank you for using calculator")
+        print("------------------------------")
+        break
